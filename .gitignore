@@ -1,0 +1,7 @@
+build/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+outbox/*.txt
+.idea/
+.DS_Store

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library admin</title>
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+
+<main id="login" class="login" hidden>
+  <form id="login-form" class="login-box" autocomplete="on">
+    <h1 id="login-title">Library admin</h1>
+    <p class="muted">Staff sign in</p>
+    <label>Username
+      <input name="username" autocomplete="username" required autofocus>
+    </label>
+    <label>Password
+      <input name="password" type="password" autocomplete="current-password" required>
+    </label>
+    <p id="login-error" class="form-error" role="alert"></p>
+    <button class="btn primary" type="submit">Sign in</button>
+  </form>
+</main>
+
+<div id="app" class="shell" hidden>
+  <aside class="sidebar">
+    <div class="brand">
+      <span id="brand-name" class="brand-name">Library</span>
+      <span class="brand-sub">Admin desk</span>
+    </div>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#/overview" data-route="overview">Overview</a>
+      <a href="#/issue" data-route="issue">Issue &amp; return</a>
+      <a href="#/students" data-route="students">Students</a>
+      <a href="#/books" data-route="books">Books</a>
+      <a href="#/fines" data-route="fines">Fines</a>
+      <a href="#/reminders" data-route="reminders">Reminders</a>
+      <a href="#/settings" data-route="settings">Settings</a>
+    </nav>
+    <div class="sidebar-foot">
+      <span id="who"></span>
+      <button id="logout" class="link-btn" type="button">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="content" id="content" tabindex="-1"></main>
+</div>
+
+<dialog id="dialog" class="dialog"></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
